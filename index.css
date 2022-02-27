@@ -10,5 +10,20 @@ body {
 }
 
 .header {
+    background-color: #b0b0b0;
+    padding: 10px;
+    margin-top: -8px;
+    margin-left: -8px;
+    width: 100%;
+    position: fixed;
+    user-select: none;
+}
 
+.footer {
+    position: fixed;
+    background-color: #b0b0b0;
+    bottom: 0;
+    margin-left: -8px;
+    text-align: center;
+    width: 100%;
 }
