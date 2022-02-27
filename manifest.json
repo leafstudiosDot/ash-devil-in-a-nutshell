@@ -4,6 +4,11 @@
     "description": "Turns every hodots. mistype into real hotdots.",
     "manifest_version": 3,
     "author": "aliamanuba",
+    "icons": { 
+        "16": "icon/16.png",
+        "48": "icon/48.png",
+       "128": "icon/128.png" 
+    },
     "action": {
         "default_popup": "index.html",
         "default_title": "ash devil in a nutshell"
