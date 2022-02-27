@@ -12,5 +12,9 @@
     "action": {
         "default_popup": "index.html",
         "default_title": "ash devil in a nutshell"
-    }
+    },
+    "background": {
+        "service_worker": "./background.js"
+    },
+    "permissions": ["tabs", "activeTab", "*://*/*", "*://*.*/*"]
 }
