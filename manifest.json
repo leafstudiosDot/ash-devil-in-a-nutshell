@@ -2,7 +2,7 @@
     "name": "ash devil in a nutshell",
     "version": "v0.1",
     "description": "Turns every hodots. mistype into real hotdots.",
-    "manifest_version": 1,
+    "manifest_version": 3,
     "author": "aliamanuba",
     "action": {
         "default_popup": "index.html",
