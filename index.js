@@ -1,14 +1,17 @@
 // This is a script
-var isAshDevilEnabled = false;
 
-//document.addEventListener('DOMContentLoaded', onInit, false);
+let isAshDevilEnabled = document.getElementById("enableAshDevil");
 
-function AshDevilCall() {
-    var check = document.getElementById("enableAshDevil");
-    if (check.checked == true) {
-        isAshDevilEnabled = true;
-    } else {
-        console.log('%c ash devil in a nutshell is disabled! ', 'color: #b30c00');
-        isAshDevilEnabled = false;
+chrome.storage.sync.get(['ashdevilen'], function(obj) {
+    isAshDevilEnabled.checked = obj.ashdevilen
+})
+
+function AshDevilExec() {
+    const payload = {
+        ashdevilen: isAshDevilEnabled.checked ? true : false
     }
+
+    chrome.storage.sync.set(payload)
 }
+
+isAshDevilEnabled.addEventListener('click', AshDevilExec);
