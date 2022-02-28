@@ -7,11 +7,15 @@ chrome.storage.sync.get(['ashdevilen'], function(obj) {
 })
 
 function AshDevilExec() {
+    let ashdevilen = isAshDevilEnabled.checked ? true : false
     const payload = {
         ashdevilen: isAshDevilEnabled.checked ? true : false
     }
-
     chrome.storage.sync.set(payload)
+
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, {ashdevilen})
+    })
 }
 
-isAshDevilEnabled.addEventListener('click', AshDevilExec);
+isAshDevilEnabled.addEventListener('change', AshDevilExec);
