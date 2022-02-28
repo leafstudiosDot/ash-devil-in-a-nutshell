@@ -4,8 +4,4 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     }
 })
 
-/*chrome.management.onUninstalled.addListener(function () {
-    chrome.tabs.create({ url: "https://youtu.be/RckGCham3uo" });
-});*/
-
 chrome.runtime.setUninstallURL("https://twitter.com/emojitownTV/status/1440595400541442050")
